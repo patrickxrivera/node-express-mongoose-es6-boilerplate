@@ -1,11 +1,13 @@
 {
   "name": "express-gmaps",
   "version": "1.0.0",
-  "description": "Topics:  * APIs  * API Documentation  * Rate Limits  * Multiple requests",
+  "description":
+    "Topics:  * APIs  * API Documentation  * Rate Limits  * Multiple requests",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./server --exec babel-node",
-    "test": "mocha \"server/**/*.js\" --watch --compilers js:babel-core/register --require babel-polyfill"
+    "test":
+      "nodemon --exec 'mocha -R min' \"server/**/*.js\" --compilers js:babel-core/register --require babel-polyfill"
   },
   "license": "ISC",
   "dependencies": {
@@ -15,10 +17,11 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "body-parser": "^1.18.2",
     "express": "^4.16.3"
   },
   "devDependencies": {
@@ -30,14 +33,10 @@
   "babel": {
     "env": {
       "development": {
-        "plugins": [
-          "ramda"
-        ]
+        "plugins": ["ramda"]
       },
       "production": {
-        "plugins": [
-          "ramda"
-        ]
+        "plugins": ["ramda"]
       }
     }
   },

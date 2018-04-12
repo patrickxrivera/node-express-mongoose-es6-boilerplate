@@ -9,13 +9,13 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 describe('API ROUTES', () => {
-  describe('GET /', () => {
-    it('should create a new post', async () => {
-      const res = await chai.request(server).get('/');
+  describe('GET /api', () => {
+    it('should get our homepage', async () => {
+      const route = '/';
+      const res = await chai.request(server).get(route);
 
       expect(res).to.have.status(code.STATUS_OK);
-      expect(res.body).to.have.property('id');
-      expect(res.body.id).to.be.a('string');
+      expect(res.body.hi).to.equal('there');
     });
   });
 });
