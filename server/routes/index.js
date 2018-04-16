@@ -3,7 +3,6 @@ import * as DriversController from '../controllers/drivers';
 
 const router = express.Router();
 
-// router.get('/', DriversController.greeting);
-// router.post('/driver/new', DriversController.create);
+router.get('/', DriversController.greeting);
 
 export default router;

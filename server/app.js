@@ -17,6 +17,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.send({ app: 'running' });
+});
+
 app.use('/api', router);
 
 // Custom middleware for error handling
