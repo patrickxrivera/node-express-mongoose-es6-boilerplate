@@ -1,1 +1,1 @@
-# backend-notes-app
+# node-express-mongoose-es6-boilerplate
