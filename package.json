@@ -1,11 +1,14 @@
 {
   "name": "express-gmaps",
   "version": "1.0.0",
-  "description": "Topics:  * APIs  * API Documentation  * Rate Limits  * Multiple requests",
+  "description":
+    "Topics:  * APIs  * API Documentation  * Rate Limits  * Multiple requests",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server --exec babel-node",
-    "test": "NODE_ENV=test nodemon --exec 'mocha -R min' \"server/**/*.test.js\" --compilers js:babel-core/register --require babel-polyfill"
+    "start": "./server",
+    "dev": "nodemon ./server --exec babel-node",
+    "test":
+      "NODE_ENV=test nodemon --exec 'mocha -R min' \"server/**/*.test.js\" --compilers js:babel-core/register --require babel-polyfill"
   },
   "license": "ISC",
   "dependencies": {
@@ -29,24 +32,19 @@
   "babel": {
     "env": {
       "development": {
-        "plugins": [
-          "ramda"
-        ]
+        "plugins": ["ramda"]
       },
       "production": {
-        "plugins": [
-          "ramda"
-        ]
+        "plugins": ["ramda"]
       }
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pxr13/node-express-gmaps.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/pxr13/node-express-gmaps/issues"
-  },
-  "homepage": "https://github.com/pxr13/node-express-gmaps#readme"
+  "engines": {
+    "name": "backend-notes-app",
+    "description": "a really cool notes app",
+    "version": "1.0.0",
+    "engines": {
+      "node": "9.8.0"
+    }
+  }
 }
