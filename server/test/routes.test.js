@@ -1,18 +1,20 @@
 import chai from 'chai';
-import * as code from '../utils/statusCodes';
+import chaiHttp from 'chai-http';
 
-const chaiHttp = require('chai-http');
-const server = require('../');
+import initTestSetup from './testSetup';
+import * as code from '../utils/statusCodes';
+import app from '../app';
 
 const expect = chai.expect;
 
+initTestSetup();
 chai.use(chaiHttp);
 
-describe('API ROUTES', () => {
+describe('ROUTES', () => {
   describe('GET /api', () => {
     it('should get our homepage', async () => {
-      const route = '/';
-      const res = await chai.request(server).get(route);
+      const route = '/api';
+      const res = await chai.request(app).get(route);
 
       expect(res).to.have.status(code.STATUS_OK);
       expect(res.body.hi).to.equal('there');
